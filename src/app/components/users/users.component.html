@@ -1,0 +1,40 @@
+<div class="row" *ngFor="let user of users " > 
+    <div class="container"style=" margin-top: 2cm">
+        <div class="col-6">
+            <label class="form-check-label" for="nameId">
+                First name
+            </label>
+            <input class="form-check-input" id="nameId"  value="{{user.first_Name}}" [(ngModel)]="user.first_Name" > 
+            <label class="form-check-label" for="lastNameId">
+                Last name
+            </label>
+            <input class="form-check-input" id="lastNameId"  value="{{user.last_Name}}" [(ngModel)]="user.last_Name" > 
+            <label class="form-check-label" for="emaild">
+                Email
+            </label>
+            <input class="form-check-input" id="emailId"  value="{{user.email}}" [(ngModel)]="user.email" > 
+            <label class="form-check-label" for="jobTitlelId">
+                Job title
+            </label>
+            <input class="form-check-input" id="jobTitlelId"  value="{{user.job_title}}" [(ngModel)]="user.job_title" >
+            <label class="form-check-label" for="phoneNoId">
+                Phone number
+            </label>
+            <input class="form-check-input" id="phoneNoId"  value="{{user.phone_no}}" [(ngModel)]="user.phone_no" >
+            <button class="btn btn-primary" (click)="saveUser(user.id)">
+                Save
+            </button>
+
+            <button class="btn btn-primary" (click)="deleteUser(user.id)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="container"style=" margin-top: 2cm">
+    <button class="btn btn-primary"  routerLink="new" routerLinkActive="active">
+        Add User
+    </button>
+</div>
+
